@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@vue/runtime-core": "^3.2.47",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.7",
+    "fant-axios-adapter": "^0.0.6",
+    "lodash-es": "^4.17.21",
+    "qs": "^6.11.2"
+  },
+  "devDependencies": {
+    "axios": "^1.3.6",
+    "pinia": "^2.0.35"
+  }
+}

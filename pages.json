@@ -1,0 +1,58 @@
+{
+	"pages": [{
+			"path": "pages/tabbar/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabbar/classify/classify",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabbar/personal-center/personal-center",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+
+
+	// 全局配置
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "租机",
+		"navigationBarBackgroundColor": "#0F7D9C",
+		"backgroundColor": "#0F7D9C"
+	},
+	"tabBar": {
+		"color": "#2c2c2c",
+		"selectedColor": "#24A0C3",
+		"borderStyle": "#black",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/tabbar/home/home",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home_active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/classify/classify",
+				"iconPath": "static/tabbar/classify.png",
+				"selectedIconPath": "static/tabbar/classify_active.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/tabbar/personal-center/personal-center",
+				"iconPath": "static/tabbar/personal-center.png",
+				"selectedIconPath": "static/tabbar/personal-center_active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

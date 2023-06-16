@@ -1,0 +1,489 @@
+/* 宽度 */
+.w-100 {
+  width: 100vw;
+}
+.h-100 {
+  height: 100vh;
+}
+.w-all {
+  width: 100%;
+}
+.h-all {
+  height: 100%;
+}
+.page {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+}
+/* flex 布局 */
+.flex {
+  display: flex;
+  flex-direction: row !important;
+}
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-col {
+  flex-direction: column !important;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+.justify-start {
+  justify-content: flex-start !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+/* #ifndef APP-NVUE */
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+/* #endif */
+.justify-center {
+  justify-content: center !important;
+}
+.align-center {
+  align-items: center !important;
+}
+.align-stretch {
+  align-items: stretch !important;
+}
+.align-start {
+  align-items: flex-start !important;
+}
+.align-end {
+  align-items: flex-end !important;
+}
+/* #ifndef APP-NVUE */
+.content-start {
+  align-content: flex-start !important;
+}
+.content-end {
+  align-content: flex-end !important;
+}
+.content-center {
+  align-content: center !important;
+}
+.content-between {
+  align-content: space-between !important;
+}
+.content-around {
+  align-content: space-around !important;
+}
+.content-stretch {
+  align-content: stretch !important;
+}
+/* #endif */
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+/* #ifndef APP-PLUS-NVUE */
+.flex-shrink {
+  flex-shrink: 0;
+}
+/* #endif */
+
+// 定义内外边距，历遍1-80
+@for $i from 0 through 80 {
+  // 只要双数和能被5除尽的数
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    // 得出：u-margin-30或者u-m-30
+    .px-#{$i} {
+      padding-left: $i + rpx !important;
+      padding-right: $i + rpx !important;
+    }
+    .py-#{$i} {
+      padding-top: $i + rpx !important;
+      padding-bottom: $i + rpx !important;
+    }
+    .mx-#{$i} {
+      margin-left: $i + rpx !important;
+      margin-right: $i + rpx !important;
+    }
+    .my-#{$i} {
+      margin-top: $i + rpx !important;
+      margin-bottom: $i + rpx !important;
+    }
+    .m-#{$i} {
+      margin-left: $i + rpx !important;
+      margin-right: $i + rpx !important;
+      margin-top: $i + rpx !important;
+      margin-bottom: $i + rpx !important;
+    }
+    .p-#{$i} {
+      padding-left: $i + rpx !important;
+      padding-right: $i + rpx !important;
+      padding-top: $i + rpx !important;
+      padding-bottom: $i + rpx !important;
+    }
+    .ml-#{$i} {
+      margin-left: $i + rpx !important;
+    }
+    .mt-#{$i} {
+      margin-top: $i + rpx !important;
+    }
+    .mr-#{$i} {
+      margin-right: $i + rpx !important;
+    }
+    .mb-#{$i} {
+      margin-bottom: $i + rpx !important;
+    }
+    .pl-#{$i} {
+      padding-left: $i + rpx !important;
+    }
+    .pt-#{$i} {
+      padding-top: $i + rpx !important;
+    }
+    .pr-#{$i} {
+      padding-right: $i + rpx !important;
+    }
+    .pb-#{$i} {
+      padding-bottom: $i + rpx !important;
+    }
+  }
+}
+/* #ifndef APP-PLUS-NVUE */
+.m-auto {
+  margin: auto;
+}
+/* #endif */
+
+// 定义字体大小
+@for $i from 9 to 60 {
+  .font-#{$i} {
+    font-size: $i + rpx;
+  }
+}
+// 定义字体(rpx)单位，大于或等于20的都为rpx单位字体
+@for $i from 20 through 60 {
+  .font-#{$i} {
+    font-size: $i + rpx;
+  }
+}
+// 圆角
+@for $i from 4 through 60 {
+  .rounded-#{$i} {
+    border-radius: $i + rpx;
+  }
+}
+/* #ifndef APP-NVUE */
+.rounded-c {
+  border-radius: 50%;
+}
+/* #endif */
+
+/* #ifndef APP-NVUE */
+@for $i from 2 through 40 {
+  .ls-#{$i} {
+    letter-spacing: $i + rpx;
+  }
+}
+/* #endif */
+
+/* 内容溢出 */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* 文字缩进 */
+/* #ifndef APP-PLUS-NVUE */
+.text-indent {
+  text-indent: 2;
+}
+/* #endif */
+/* 文字划线 */
+.text-through {
+  text-decoration: line-through;
+}
+/* 文字对齐 */
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+/* 文字换行溢出处理 */
+.text-ellipsis {
+  /* #ifndef APP-PLUS-NVUE */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* #endif */
+  /* #ifdef APP-PLUS-NVUE */
+  lines: 1;
+  text-overflow: ellipsis;
+  /* #endif */
+}
+/* #ifdef APP-NVUE */
+.text-ellipsis-2 {
+  lines: 2;
+  text-overflow: ellipsis;
+}
+/* #endif */
+/* #ifndef APP-PLUS-NVUE */
+.text-ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; //多行在这里修改数字即可
+  overflow: hidden;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+/* #endif */
+
+/* 文字粗细和斜体 */
+.font-300 {
+  font-weight: 300;
+} /*细*/
+.fw-100 {
+  font-weight: 100;
+} /*更细*/
+.fw-400 {
+  font-weight: 400;
+} /*正常*/
+.fw-500 {
+  font-weight: 500;
+} /*正常*/
+.fw-700 {
+  font-weight: 700;
+} /*粗*/
+.fw-bold {
+  font-weight: bold;
+} /*更粗*/
+.font-italic {
+  font-style: italic;
+} /*斜体*/
+
+/* 文字颜色 */
+.text-white {
+  color: #ffffff;
+}
+.text-gray {
+  color: #999999;
+}
+.text-main {
+  color: #666666;
+}
+.text-primary {
+  color: #0f7d9c;
+}
+.text-hover-primary {
+  color: #0056b3;
+}
+.text-secondary {
+  color: #6c757d;
+}
+.text-hover-secondary {
+  color: #494f54;
+}
+.text-success {
+  color: #28a745;
+}
+.text-hover-success {
+  color: #19692c;
+}
+.text-info {
+  color: #17a2b8;
+}
+.text-hover-info {
+  color: #0f6674;
+}
+.text-warning {
+  color: #f29e1a;
+}
+.text-hover-warning {
+  color: #ba8b00;
+}
+.text-danger {
+  color: #dc3545;
+}
+.text-hover-danger {
+  color: #a71d2a;
+}
+.text-light {
+  color: #f8f9fa;
+}
+.text-hover-light {
+  color: #cbd3da;
+}
+.text-dark {
+  color: #041a20;
+}
+.text-hover-dark {
+  color: #121416;
+}
+.text-body {
+  color: #333333;
+}
+.text-muted {
+  color: #6c757d;
+}
+.text-light-muted {
+  color: #a9a5a0;
+}
+.text-light-black {
+  color: rgba(0, 0, 0, 0.5);
+}
+.text-light-white {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 背景颜色 */
+.bg-primary {
+  background-color: #0f7d9c;
+}
+.bg-gray {
+  background-color: #999999;
+}
+.bg-hover-primary:hover {
+  background-color: #0056b3;
+}
+.bg-secondary {
+  background-color: #6c757d;
+}
+.bg-hover-secondary:hover {
+  background-color: #545b62;
+}
+.bg-success {
+  background-color: #28a745;
+}
+.bg-hover-success {
+  background-color: #1e7e34;
+}
+.bg-info {
+  background-color: #17a2b8;
+}
+.bg-hover-info {
+  background-color: #117a8b;
+}
+.bg-warning {
+  background-color: #ffab3a;
+}
+.bg-hover-warning {
+  background-color: #d39e00;
+}
+.bg-danger {
+  background-color: #dc3545;
+}
+.bg-hover-danger {
+  background-color: #bd2130;
+}
+.bg-light {
+  background-color: #f8f9fa;
+}
+.bg-hover-light:hover {
+  background-color: #dae0e5;
+}
+.bg-dark {
+  background-color: #343a40;
+}
+.bg-hover-dark:hover {
+  background-color: #1d2124;
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+
+// 边框
+.border {
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #e5e5e5;
+}
+.border-top {
+  border-top-width: 0.5px;
+  border-top-style: solid;
+  border-top-color: #e5e5e5;
+}
+.border-right {
+  border-right-width: 0.5px;
+  border-right-style: solid;
+  border-right-color: #e5e5e5;
+}
+.border-bottom {
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid;
+  border-bottom-color: #e5e5e5;
+}
+.border-left {
+  border-left-width: 0.5px;
+  border-left-style: solid;
+  border-left-color: #e5e5e5;
+}
+
+/* 定位 */
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-fixed {
+  position: fixed;
+}
+/* 定位 - 固定顶部 */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+/* 定位 - 固定底部 */
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+.top-0 {
+  top: 0;
+}
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+
+// 功能性css
+.padding-tabbar {
+  padding-bottom: 164rpx;
+}
