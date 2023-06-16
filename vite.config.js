@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     uni(),
     AutoImport({
-      imports: ["vue","./compositions"], 
+      imports: ["vue"], 
     }),
   ],
   resolve: {
